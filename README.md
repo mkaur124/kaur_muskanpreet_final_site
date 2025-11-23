@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Muskanpreet Kaur - Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal portfolio website showcasing my web development projects, skills, and developer setup. The site is built with React and deployed using Docker.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Live Demo (Dockerized)**
 
-### `npm start`
+The portfolio site can be run locally in a Docker container at:
+http://localhost:5575
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Project Structure**
+kaur_muskanpreet_final_site/
+├─ Dockerfile
+├─ README.md
+├─ package.json
+├─ public/
+└─ src/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `src/` → React source code
+- `public/` → Static assets (images, icons, etc.)
+- `Dockerfile` → Builds and serves the production app via Nginx
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Getting Started**
 
-### `npm run build`
+### **Prerequisites**
+- Node.js (for local development)
+- npm
+- Docker installed and running
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **1. Running Locally (Development)**
+To see your changes in real time:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+npm start
+http://localhost:3000
 
-### `npm run eject`
+Building Production Version
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Before running Docker, create a production build:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm run build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The build will be placed in the build/ folder.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Building and Running Docker Container
 
-## Learn More
+Step 1: Build the Docker image:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+docker build -t kaur_muskanpreet_coding_assignment14 .
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Step 2: Run the container:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+docker run -d -p 5575:80 kaur_muskanpreet_coding_assignment14
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Access your portfolio at http://localhost:5575
 
-### Making a Progressive Web App
+Step 3: Stop the container (if needed):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+docker stop kaur_muskanpreet_coding_assignment14
 
-### Advanced Configuration
+4. Portfolio Sections
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Basic Information – Name, profile picture, short introduction
 
-### Deployment
+Work / Projects – Detailed project cards with images, descriptions, tech used, and links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Skills – Languages, frameworks, tools, with descriptions
 
-### `npm run build` fails to minify
+Resources – External documentation and libraries used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developer Setup – VSCode, terminal, preferred editor font
+
+5. Skills
+
+Languages / Frameworks: HTML5, CSS3, JavaScript, React
+
+Tools: VSCode, Git, Docker, Material-UI
+
+6. Resources
+
+React Official Docs
+ – Comprehensive documentation for React
+
+Material-UI
+ – Component library used for styling
+
+This portfolio is built for academic purposes for Red River College.
+All assets and images are included in the public/ folder.

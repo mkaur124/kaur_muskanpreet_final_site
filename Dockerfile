@@ -22,7 +22,7 @@ FROM nginx:stable-alpine
 # Copy the build output to nginx's default public folder
 COPY --from=build /kaur_muskanpreet_final_site/build /usr/share/nginx/html
 
-# Expose port 5575
+# Expose port 5575 inside the container
 EXPOSE 5575
 
 # Start nginx in the foreground

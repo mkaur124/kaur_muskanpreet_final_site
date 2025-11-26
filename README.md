@@ -10,6 +10,7 @@ The portfolio site can be run locally in a Docker container at:
 http://localhost:5575
 
 ## **Project Structure**
+
 kaur_muskanpreet_final_site/
 ├─ Dockerfile
 ├─ README.md
@@ -26,6 +27,7 @@ kaur_muskanpreet_final_site/
 ## **Getting Started**
 
 ### **Prerequisites**
+
 - Node.js (for local development)
 - npm
 - Docker installed and running
@@ -33,6 +35,7 @@ kaur_muskanpreet_final_site/
 ---
 
 ### **1. Running Locally (Development)**
+
 To see your changes in real time:
 
 ```bash
@@ -94,3 +97,4 @@ Material-UI
 
 This portfolio is built for academic purposes for Red River College.
 All assets and images are included in the public/ folder.
+```

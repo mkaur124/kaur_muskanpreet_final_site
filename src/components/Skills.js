@@ -1,59 +1,71 @@
-import React from "react";
+import React from 'react';
+
+const skills = [
+  {
+    id: 'html5',
+    name: 'HTML5',
+    type: 'Language/Framework',
+    description: 'Markup language used to structure web content.',
+  },
+  {
+    id: 'css3',
+    name: 'CSS3',
+    type: 'Language/Framework',
+    description:
+      'Styling language used for responsive and visually appealing layouts.',
+  },
+  {
+    id: 'javascript',
+    name: 'JavaScript',
+    type: 'Language/Framework',
+    description:
+      'Programming language for dynamic and interactive web functionality.',
+  },
+  {
+    id: 'react',
+    name: 'React',
+    type: 'Language/Framework',
+    description: 'Frontend library for building reusable UI components.',
+  },
+  {
+    id: 'mui',
+    name: 'Material-UI (MUI)',
+    type: 'Tool',
+    description:
+      'React component library to build accessible and responsive UI quickly.',
+  },
+  {
+    id: 'vscode',
+    name: 'VS Code',
+    type: 'Tool',
+    description: 'Preferred code editor with extensions for web development.',
+  },
+  {
+    id: 'git',
+    name: 'Git & GitHub',
+    type: 'Tool',
+    description:
+      'Version control and code repository for collaboration and CI/CD.',
+  },
+  {
+    id: 'api',
+    name: 'API Integration',
+    type: 'Tool',
+    description:
+      'Fetching and displaying real-time and historical data from external APIs.',
+  },
+];
 
 function Skills() {
-  const skills = [
-    {
-      name: "HTML5",
-      type: "Language/Framework",
-      description: "Markup language used to structure web content."
-    },
-    {
-      name: "CSS3",
-      type: "Language/Framework",
-      description: "Styling language used for responsive and visually appealing layouts."
-    },
-    {
-      name: "JavaScript",
-      type: "Language/Framework",
-      description: "Programming language for dynamic and interactive web functionality."
-    },
-    {
-      name: "React",
-      type: "Language/Framework",
-      description: "Frontend library for building reusable UI components."
-    },
-    {
-      name: "Material-UI (MUI)",
-      type: "Tool",
-      description: "React component library to build accessible and responsive UI quickly."
-    },
-    {
-      name: "VS Code",
-      type: "Tool",
-      description: "Preferred code editor with extensions for web development."
-    },
-    {
-      name: "Git & GitHub",
-      type: "Tool",
-      description: "Version control and code repository for collaboration and CI/CD."
-    },
-    {
-      name: "API Integration",
-      type: "Tool",
-      description: "Fetching and displaying real-time and historical data from external APIs."
-    }
-  ];
-
   return (
-    <section id="skills">
-      <h2>Skills</h2>
+    <ul>
       {skills.map((skill) => (
-        <div key={skill.name} className="skills-item">
-          <h3>{skill.name} <span className="skill-type">({skill.type})</span></h3>
+        <li key={skill.id} data-testid={`skill-${skill.id}`}>
+          <strong>{skill.name}</strong> – {skill.type}
           <p>{skill.description}</p>
-        </div>
+        </li>
       ))}
-    </section>
+    </ul>
   );
 }
 
